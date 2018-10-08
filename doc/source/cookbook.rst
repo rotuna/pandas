@@ -1354,3 +1354,37 @@ of the data values:
        'weight': [100, 140, 180],
        'sex': ['Male', 'Female']})
    df
+
+Common Excel Operations
+-----------------------
+
+Fill Handle
+***********
+
+Create a series of numbers in a DataFrame.
+
+.. ipython:: python
+
+    df = pd.DataFrame({'AAA': [1]*8, 'BBB': list(range(0,8))}); df
+
+    # Fill numbers with difference 4 starting from 1 
+    # in rows 2 to 5 in column AAA.
+
+    df.iloc[2:(5+1)].AAA = [ x*4 + 2 for x in range(0, len(df.iloc[2:(5+1)])) ]
+
+    df
+
+Filters
+*******
+
+.. ipython:: python
+
+   # Filter by value 0 in column AAA
+
+   df[df.AAA == 0]
+
+   # Filter by multiple values
+
+   df[(df.AAA == 0) | (df.AAA == 2)]
+
+
