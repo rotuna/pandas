@@ -1361,7 +1361,7 @@ Common Excel Operations
 Fill Handle
 ***********
 
-Create a series of numbers in a DataFrame.
+Create a series of numbers following a set pattern in a certain set of cells.
 
 .. ipython:: python
 
